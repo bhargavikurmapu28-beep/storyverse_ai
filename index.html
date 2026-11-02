@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STORYVERSE AI</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #101020;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 25px;
+            background: #191933;
+        }
+
+        header h1 {
+            color: #b99aff;
+            font-size: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 25px;
+        }
+
+        textarea, select {
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 130px;
+        }
+
+        button {
+            padding: 15px 25px;
+            background: #8957ff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #7040dc;
+        }
+
+        #message {
+            margin-top: 20px;
+            color: #b99aff;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>✨ STORYVERSE AI</h1>
+    <p>Your Imagination, Our Animation</p>
+</header>
+
+<div class="container">
+
+    <h2>Create Your Animated Story</h2>
+
+    <textarea id="story"
+    placeholder="Enter your story idea here..."></textarea>
+
+    <select id="language">
+        <option value="Telugu">Telugu</option>
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+    </select>
+
+    <select id="format">
+        <option value="Shorts">YouTube Shorts</option>
+        <option value="Landscape">YouTube Landscape</option>
+    </select>
+
+    <select id="animation">
+        <option value="3D Cartoon">3D Cartoon</option>
+        <option value="Realistic 3D">Realistic 3D</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="createStory()">
+        Create My Story
+    </button>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+function createStory() {
+
+    const story = document.getElementById("story").value;
+
+    const message = document.getElementById("message");
+
+    if (story.trim() === "") {
+        message.innerText = "Please enter your story first!";
+        return;
+    }
+
+    message.innerText =
+        "Your story details are ready. AI generation will be connected next!";
+}
+</script>
+
+</body>
+</html>
